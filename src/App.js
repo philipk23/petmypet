@@ -1,5 +1,8 @@
+import { Route, Routes } from 'react-router-dom';
+
 import Heather from './components/Heather/Heather';
 import Footer from './components/Footer/Footer';
+import Categories from './components/Categories/Categories';
 import './App.css';
 
 function App() {
@@ -7,7 +10,10 @@ function App() {
     <div className="container">
       <Heather/>
 
-      <h1>Hello World</h1>
+      <Routes>
+        <Route path="/" element={<Categories/>}/>
+        <Route path="/categories/:category" element={<Categories/>}/>
+      </Routes>
 
       <Footer/>
     </div>
