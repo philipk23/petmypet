@@ -4,6 +4,7 @@ import Heather from './components/Heather/Heather';
 import Footer from './components/Footer/Footer';
 import Categories from './components/Categories/Categories';
 import PetDetails from './components/PetDetails/PetDetails';
+import CreatePet from './components/CreatePet/CreatePet';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Categories/>}/>
         <Route path="/categories/:category" element={<Categories/>}/>
         <Route path="/pets/details/:petId" element={<PetDetails/>}/>
+        <Route path="/pets/create" element={<CreatePet/>}></Route>
       </Routes>
 
       <Footer/>
