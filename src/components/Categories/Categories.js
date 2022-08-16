@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import * as petsService from '../../services/petsService';
 import CategoryNavigation from "./CategoryNavigation/CategoryNavigation";
-import Pet from "../Pet/Pet";
+import PetCard from "../PetCard/PetCard";
 
 export default function Categories() {
   const { category } = useParams();
@@ -20,7 +20,7 @@ export default function Categories() {
       <CategoryNavigation/>
       <ul className="other-pets-list">
         {pets.map(x => 
-          <Pet key={x.id} {...x}/>  
+          <PetCard key={x.id} {...x}/>  
         )}
       </ul>
       </section>
