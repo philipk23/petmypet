@@ -13,8 +13,6 @@ const PetDetails = () => {
       .then(res => setPet(res))
   }, [petId]);
 
-  console.log(pet);
-
   return (
     <section className="detailsOtherPet">
         <DetailsOfAPet key={petId} {...pet}/>
