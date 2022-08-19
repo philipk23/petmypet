@@ -42,5 +42,17 @@ export const update = (petId, pet) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(pet)
-  });
+  })
+  .then(res => res.json());
+}
+
+export const pet = (petId, likes) => {
+  return fetch(`${url}/${petId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({likes})
+  })
+  .then(res => res.json());
 }

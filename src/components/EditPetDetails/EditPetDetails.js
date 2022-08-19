@@ -24,6 +24,7 @@ const EditPetDetails = () => {
 
     petsService.update(petId, updatedPet)
       .then(res => {
+        setPet(res)
         navigate(`/pets/details/${petId}`)
       })
   }
